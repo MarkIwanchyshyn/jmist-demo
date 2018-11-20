@@ -159,9 +159,8 @@ public class Main {
         rasterer.height = 128;
         rasterer.showProgress = false;
         rasterer.showImage =false;
-        rasterer.samplesPerPixel = 50;
         float fps = 20;
-        int len = 80;
+        int len = 40;
         for (int i = 0; i < len; i++) {
             System.out.println("Started " + i + " out of " + len);
             final Scene cornellBoxScene = new CornellBoxScene(rasterer.cm);
