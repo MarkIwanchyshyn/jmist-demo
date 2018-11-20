@@ -13,7 +13,7 @@
     <dependency>
       <groupId>ca.eandb.jmist</groupId>
       <artifactId>jmist-core</artifactId>
-      <version>0.1.5</version>
+      <version>0.1.6-SNAPSHOT</version>
     </dependency>
 
   </dependencies>

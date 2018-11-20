@@ -112,8 +112,6 @@ public class Rasterer {
         PixelShader pixelShader = new AveragingPixelShader(samplesPerPixel, new RandomPixelShader(random, imageShader, cm));
 
 
-
-
         RasterJob job = null;
         JFrame displayFrame = null;
 
