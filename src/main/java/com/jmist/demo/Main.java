@@ -28,9 +28,17 @@ public class Main {
 
     static String BASEDIR = System.getProperty("user.dir");
 
+    static Rasterer r = new Rasterer(BASEDIR);
 
     public static void main(String[] args) throws IOException {
-        switch (Integer.parseInt(args[0])) {
+        if (args.length >= 2 && args[1].equals("hide")) {
+	    r.showProgress = false;
+	    r.showImage = false;
+	}	
+	    for (String s : args){
+		System.out.println(s);
+	}
+	switch (Integer.parseInt(args[0])) {
             case 1:
                 shapeTest();
                 break;
@@ -50,7 +58,6 @@ public class Main {
      * Renders a reflective spheroid
      */
     public static void shapeTest() throws IOException {
-        Rasterer r = new Rasterer(BASEDIR);
         final BranchSceneElement sceneRoot = new BranchSceneElement();
 
         final Spheroid spheroid = new Spheroid(100,200);
@@ -90,7 +97,6 @@ public class Main {
      * Demonstrates Constructive Solid Geometry
      */
     public static void CSGdemo() throws IOException {
-        Rasterer r = new Rasterer(BASEDIR);
         final BranchSceneElement sceneRoot = new BranchSceneElement();
 
         SceneElement sphere1 = new SphereGeometry(new Point3(200,250,250), 150);
@@ -128,7 +134,6 @@ public class Main {
      * A Cornell Box scene run to convergence
      */
     public static void highResScene() throws IOException {
-        Rasterer r = new Rasterer(BASEDIR);
         r.scene = new CornellBoxScene(r.cm);
         r.samplesPerPixel = 500;
         r.maxDepth = 20;
@@ -154,16 +159,15 @@ public class Main {
                 new FileImageOutputStream(new File(outRend.toString()));
         GifSequenceWriter writer = null;
 
-        Rasterer rasterer = new Rasterer(BASEDIR);
-        rasterer.width = 128;
-        rasterer.height = 128;
-        rasterer.showProgress = false;
-        rasterer.showImage =false;
+        r.width = 128;
+        r.height = 128;
+        r.showProgress = false;
+        r.showImage =false;
         float fps = 20;
         int len = 40;
         for (int i = 0; i < len; i++) {
             System.out.println("Started " + i + " out of " + len);
-            final Scene cornellBoxScene = new CornellBoxScene(rasterer.cm);
+            final Scene cornellBoxScene = new CornellBoxScene(r.cm);
             final BranchSceneElement sceneRoot = new BranchSceneElement();
 
 
@@ -214,9 +218,9 @@ public class Main {
             fileName.append("-"+i);
             fileName.append("-test.png");
 
-            rasterer.fileName = fileName.toString();
-            rasterer.scene = scene;
-            rasterer.render();
+            r.fileName = fileName.toString();
+            r.scene = scene;
+            r.render();
 
             BufferedImage nextImage = ImageIO.read(new File(fileName.toString()));
 
