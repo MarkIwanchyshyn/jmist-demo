@@ -35,9 +35,6 @@ public class Main {
 	    r.showProgress = false;
 	    r.showImage = false;
 	}	
-	    for (String s : args){
-		System.out.println(s);
-	}
 	switch (Integer.parseInt(args[0])) {
             case 1:
                 shapeTest();
