@@ -1,4 +1,3 @@
-WARNING still pointing to 0.1.6-SNAPSHOT for SpheroidGeometry.
 
 # JMIST Demo
 Demonstration for [JMIST](http://jmist.eandb.ca/)
@@ -47,6 +46,27 @@ To hide the progress indicatiors (for example if running over ssh) run as:
 ```
 java -jar target/jmist-demo-1.0-SNAPSHOT-jar-with-dependencies.jar 1 hide
 ```
+
+
+## Windows
+
+If you have maven and java installed the above instructions worked for my windows without changes.
+Otherwise you can install intellij and it should just work, because intellij has a maven version built-in (tested on 2014 and 2018).
+
+
+## Offline
+
+If you are unable or unwilling to use maven, the dependencies are provided as jars and can be used by intellij.
+
+
+To do this go to: 
+File -> Project Structure -> Libraries and press + for 'New Project Library'.  Select Java then select the libs folder in the checked out repository.
+
+
+Now to run the program.  A runConfiguraton has been provided under .idea/ but I was having trouble getting intellij to recognize it so the instructions are here as reference.
+Run -> Edit Configurations... .  Add a new Applicaton config, then: set the Main class as com.jmist.demo.Main, and set the program arguments to 1 (for the first demo).  The rest of the defaults should be fine.
+
+Now when you press 'run' the program should compile and run as expected.
 
 
 ## Output
