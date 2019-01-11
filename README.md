@@ -59,6 +59,9 @@ Otherwise you can install intellij and it should just work, because intellij has
 If you are unable or unwilling to use maven, the dependencies are provided as jars and can be used by intellij.
 
 
+To open the project in intellij, use Import not Open.  Then choose Import from External Model and choose Maven.  From there the defaults should be fine.
+
+
 To do this go to: 
 File -> Project Structure -> Libraries and press + for 'New Project Library'.  Select Java then select the libs folder in the checked out repository.
 
