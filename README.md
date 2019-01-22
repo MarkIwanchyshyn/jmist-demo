@@ -48,6 +48,14 @@ java -jar target/jmist-demo-1.0-SNAPSHOT-jar-with-dependencies.jar 1 hide
 ```
 
 
+## Output
+
+This demo creates two folders in the running folder:
+* Renders, which contains the image output.
+* Working, which contains working files used by the renderer.
+
+
+
 ## Windows
 
 If you have maven and java installed the above instructions worked for my windows without changes.
@@ -71,12 +79,6 @@ Run -> Edit Configurations... .  Add a new Applicaton config, then: set the Main
 
 Now when you press 'run' the program should compile and run as expected.
 
-
-## Output
-
-This demo creates two folders in the running folder:
-* Renders, which contains the image output.
-* Working, which contains working files used by the renderer.
 
 ## Thanks
 
