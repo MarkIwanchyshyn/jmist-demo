@@ -20,6 +20,7 @@ Clone this repo:
 git clone https://github.com/MarkIwanchyshyn/jmist-demo.git
 ```
 
+For editting or running offline [Intellij](https://www.jetbrains.com/help/idea/install-and-set-up-product.html) is recommended.
 
 ## Running
 
@@ -64,7 +65,7 @@ Otherwise you can install intellij and it should just work, because intellij has
 
 ## Offline
 
-If you are unable or unwilling to use maven, the dependencies are provided as jars and can be used by intellij.
+If you are unable or unwilling to use maven, the dependencies are provided as jars and can be used by Intellij.
 
 
 To open the project in intellij, use Import not Open.  Then choose Import from External Model and choose Maven.  From there the defaults should be fine.
