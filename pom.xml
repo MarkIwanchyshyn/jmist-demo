@@ -4,7 +4,10 @@
   <groupId>com.jmist.demo</groupId>
   <artifactId>jmist-demo</artifactId>
   <packaging>jar</packaging>
-
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
   <version>1.0-SNAPSHOT</version>
   <name>jmist-demo</name>
   <url>http://maven.apache.org</url>
